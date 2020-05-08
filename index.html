@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Hola mundo</h1>
+
+	<noscript>
+		<b>
+			Bienvenido a Mi sitio web
+		</b>
+		<p>
+			habilita la función de javascript para que el sitio funcione correctamente
+		</p>
+	</noscript>
+
+	<!-- JAVSCRIPT DOCUMENTO DESDE ELEMENTO -->
+	<button onclick="alert('Hola mundo')" onmouseover="myfunction(this)" data-cc="1">
+		click me
+	</button>
+
+	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
+	<script type="text/javascript" src="assets/js/main.js?v=0.2"></script>
+
+	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
+	<script type="text/javascript">
+		function myfunction(target){ 
+			console.log(target)
+		}
+	</script>
+</body>
+</html>
