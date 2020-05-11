@@ -13,28 +13,46 @@
 * Boolean
 */
 
+//Math.trunc(13.37)
+
+var flag = false;
+var edad = prompt("Ingrese su edad",12);
+
+if ( edad >= 18) { //condición   t o f, 1  = t, 0 = f 
+
+	console.log("El usuario es mayor de edad");
+
+}else if(edad >= 10 && edad < 18){
+
+	console.log("El usuario tiene entre 10 y 17")
+
+}else{
+
+	console.log("El usuario es muy pequeño")
+}
+
 var flag = false;
 
            //   0  ,   1    ,     2     ,   3    ,    4    ,    5   ,    6
 var dias = ["Lunes","martes","Miércoles","Jueves","Viernes","Sábado","Domingo"];
 
-for (var i = 0; i < dias.length; ++i) {
+for(i in dias){
 	console.log(dias[i])
 }
+
+/*for (var i = 0; i < dias.length; i++) {
+	console.log(dias[i])
+}*/
+
+/*for (var i = 0; i < dias.length; ++i) {
+	console.log(dias[i])
+}*/
+
 
 var numero1 = 9; 
 	numero1 %=2;
 	console.log(numero1);
 	//divisibles
-	
-	/*
-	if(arreglo[3] > arreglo[4]){
-		alert(arreglo[3])
-	}else{
-		alert(arreglo[4])
-	}
- 	resultado = arreglo[3] > arreglo[4];
- 	*/
 
 var mensaje = "Hola este es mi sitio web";
 var producto = 'Chocolate abuelita';
@@ -50,5 +68,5 @@ var resultado = valor_uno+valor_dos;
 
 //console.log(valor_uno)
 console.log(resultado)
-alert(texto1)
+//alert(texto1)
  
