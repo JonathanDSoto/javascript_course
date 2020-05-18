@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title></title>
-	<meta charset="utf-8">
+	<meta name="" charset="utf-8">
+	<style type="text/css">
+		.body{
+			width: 100%;
+			min-height: 500px;
+			background-color: gray;
+		}
+		.card{
+			width: 25%;
+			border: 25px;
+			border-color: black;
+			border-style: solid;
+			margin: auto;
+			min-height: 400px;
+			background-color: #009688;
+			display: inline-block;
+			padding: 2%;
+		}
+		body{
+			color:white;
+		}
+	</style>
 </head>
 <body>
-	<h1>Hola mundo</h1>
+	<div class="body">
+		<div class="card">
+			<b name="tituloUno">
+				Texto
+			</b>
+			<p name="parrafo" id="parrafin">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="card">
+			<h1 name="EncabezadoUno">Hola mundo</h1>
+			<p name="parrafo2">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud <b>exercitation ullamco laboris nisi ut</b> aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa <a href="">qui officia deserunt mollit anim id es</a> t laborum.
+			</p>
+		</div>
+		<div class="card"> 
+			<h1>Lista</h1>
+			<ol name="lista">
+				<li>
+					Uno
+				</li>
+				<li name="li_dos">
+					Dos
+				</li>
+				<li>
+					Tres
+				</li>
+			</ol>
+
+			<button onclick="excuteOrder66()" data-cc="1">
+				click me
+			</button>
+		</div>
+	</div>
+	
 
 	<noscript>
 		<b>
@@ -16,13 +81,8 @@
 		</p>
 	</noscript>
 
-	<!-- JAVSCRIPT DOCUMENTO DESDE ELEMENTO -->
-	<button onclick="alert('Hola mundo')" onmouseover="myfunction(this)" data-cc="1">
-		click me
-	</button>
-
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/funciones.js?v=0.1"></script>
+	<script type="text/javascript" src="assets/js/dom.js?v=0.1"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">
