@@ -23,11 +23,15 @@
 		body{
 			color:white;
 		}
+		img{
+			width: 50%;
+			display: block;
+		}
 	</style>
 </head>
 <body>
 	<div class="body">
-		<div class="card">
+		<div class="card" style="font-weight: bold;">
 			<b name="tituloUno">
 				Texto
 			</b>
@@ -48,7 +52,7 @@
 				quis nostrud <b>exercitation ullamco laboris nisi ut</b> aliquip ex ea commodo
 				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa <a href="">qui officia deserunt mollit anim id es</a> t laborum.
+				proident, sunt in culpa <a href="https://www.google.com/" target="_blank" id="enlace">qui officia deserunt mollit anim id es</a> t laborum.
 			</p>
 		</div>
 		<div class="card"> 
@@ -65,8 +69,16 @@
 				</li>
 			</ol>
 
+			<img src="assets/img/tools.jpg" >
+
 			<button onclick="excuteOrder66()" data-cc="1">
 				click me
+			</button>
+
+			<hr>
+
+			<button onclick="excuteOrder67()">
+				Click me
 			</button>
 		</div>
 	</div>
@@ -82,7 +94,7 @@
 	</noscript>
 
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/dom.js?v=0.1"></script>
+	<script type="text/javascript" src="assets/js/dom.js?v=0.2"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">

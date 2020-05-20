@@ -1,4 +1,29 @@
 
+function excuteOrder67(){
+
+	var enlace = document.getElementById('enlace');
+	console.log(enlace.href)
+	enlace.href = 'https://www.youtube.com/';
+	console.log(enlace.target)
+	enlace.target = '_self';
+
+	var contenedores = document.getElementsByClassName('card');
+	console.log(contenedores)
+
+	for (var i = 0; i < contenedores.length; i++) {
+		//console.log(contenedores[i].style.border)
+
+		contenedores[i].style.border = 'black solid 5px';
+		contenedores[i].style.fontWeight = '100';
+	}
+
+	contenedores = document.getElementsByTagName('div');
+	//console.log(contenedores)
+	for (var i = 0; i < contenedores.length; i++) {
+		console.log(contenedores[i].className)
+	}
+}
+
 
 function excuteOrder66(){
 
