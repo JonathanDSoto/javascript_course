@@ -29,9 +29,9 @@
 		}
 	</style>
 </head>
-<body>
-	<div class="body">
-		<div class="card" style="font-weight: bold;">
+<body onkeypress="test(this)">
+	<div class="body" >
+		<div class="card" style="font-weight: bold;" onmouseover="saludo(this)" onmouseout="despedida(this)">
 			<b name="tituloUno">
 				Texto
 			</b>
@@ -44,7 +44,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</div>
-		<div class="card">
+		<div class="card" id="" onmouseover="saludo(this)" onmouseout="despedida(this)">
 			<h1 name="EncabezadoUno">Hola mundo</h1>
 			<p name="parrafo2">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -55,7 +55,7 @@
 				proident, sunt in culpa <a href="https://www.google.com/" target="_blank" id="enlace">qui officia deserunt mollit anim id es</a> t laborum.
 			</p>
 		</div>
-		<div class="card"> 
+		<div class="card" onmouseover="saludo(this)" onmouseout="despedida(this)"> 
 			<h1>Lista</h1>
 			<ol name="lista">
 				<li>
@@ -94,7 +94,7 @@
 	</noscript>
 
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/dom.js?v=0.2"></script>
+	<script type="text/javascript" src="assets/js/dom.js?v=0.3"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">

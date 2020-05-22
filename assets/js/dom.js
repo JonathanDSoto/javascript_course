@@ -1,3 +1,16 @@
+function saludo(target){ 
+	target.style.backgroundColor = "#72EE6A";
+	console.log(target.innerHTML)
+}
+
+function test(target){
+	console.log("h")
+	console.log(target)
+}
+
+function despedida(target){ 
+	target.style.backgroundColor = "#009688";
+}
 
 function excuteOrder67(){
 
