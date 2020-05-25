@@ -1,3 +1,29 @@
+
+function manejadorEventos(event){
+	var evento = event || window.event;
+	console.log("asd")
+
+	switch(evento.type){
+		case 'mouseover':
+			console.log(evento);
+		break;
+		case 'mouseout':
+			console.log(evento);
+		break;
+	}
+}
+
+window.onload = function(){
+	document.getElementsByTagName('body')[0].onmouseover = manejadorEventos; 
+
+
+}
+
+function test2(event){
+	coue
+	console.log(event);
+}
+
 function rezice(imagen){
 	console.log(imagen)
 	imagen.style.width = '80%'; 
