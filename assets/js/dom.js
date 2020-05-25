@@ -1,10 +1,19 @@
+function rezice(imagen){
+	console.log(imagen)
+	imagen.style.width = '80%'; 
+}
+
+function original(imagen){
+	console.log(imagen) 
+	imagen.style.width = '50%'; 
+}
+
 function saludo(target){ 
 	target.style.backgroundColor = "#72EE6A";
-	console.log(target.innerHTML)
+	//console.log(target.innerHTML)
 }
 
 function test(target){
-	console.log("h")
 	console.log(target)
 }
 
