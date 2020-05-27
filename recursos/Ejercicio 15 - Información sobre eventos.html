@@ -8,12 +8,32 @@ body {font-family: arial, helvetica;}
 #info h1 {margin: 0;}
 </style>
 <script type="text/javascript">
-function muestraInformacion(mensaje) {
-	document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
+function muestraInformacion(h1,navegador,pagina) {
+	/*document.getElementById("info").innerHTML = '<h1>'+mensaje[0]+'</h1>';
 	for(var i=1; i<mensaje.length; i++) {
 		document.getElementById("info").innerHTML += '<p>'+mensaje[i]+'</p>';
+	}*/
+}
+function manejadorEventos(event){
+	var evento = event || window.event;  
+
+	switch(evento.type){
+		case 'mouseover':
+			console.log(evento);
+			muestraInformacion('Ratón',navegador,pagina)
+		break;
+		case 'mouseout':
+			console.log(evento);
+			muestraInformacion('Ratón',navegador,pagina)
+		break; 
 	}
 }
+window.onload = function(){
+	document.getElementsByTagName('body')[0].onmouseover = manejadorEventos; 
+	/*document.onkeypress = muestraInformacion;
+	document.onclick = manejadorMouse;*/
+}
+ 
 </script>
 </head>
 <body>
