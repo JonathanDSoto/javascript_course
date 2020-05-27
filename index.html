@@ -29,7 +29,7 @@
 		}
 	</style>
 </head>
-<body onkeypress="test(this)">
+<body >
 	<div class="body">
 		<div class="card" style="font-weight: bold;" onmouseover="saludo(this)" onmouseout="despedida(this)">
 			<b name="tituloUno">
@@ -44,9 +44,9 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 
-			<img src="assets/img/tools.jpg" onmouseover="rezice(this)" onmouseout="original(this)">
+			<img src="assets/img/tools.jpg" id="imagen" onmouseover="rezice(this)" onmouseout="original(this)">
 		</div>
-		<div class="card" id="" onmouseover="saludo(this)" onmouseout="despedida(this)">
+		<div class="card" id="segundo_div" onmouseover="saludo(this)" onmouseout="despedida(this)">
 			<h1 name="EncabezadoUno">Hola mundo</h1>
 			<p name="parrafo2">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -96,7 +96,7 @@
 	</noscript>
 
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/dom.js?v=0.4"></script>
+	<script type="text/javascript" src="assets/js/dom.js?v=0.5"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">

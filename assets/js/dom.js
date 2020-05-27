@@ -1,7 +1,8 @@
+var margin = 0;
 
 function manejadorEventos(event){
 	var evento = event || window.event;
-	console.log("asd")
+	//console.log("asd")
 
 	switch(evento.type){
 		case 'mouseover':
@@ -13,11 +14,51 @@ function manejadorEventos(event){
 	}
 }
 
+function muestraInformacion(event){
+	var evento = event || window.event;
+
+	//console.log(evento);
+
+	/*console.log("Tipo de evento: "+ evento.type);
+	console.log("Keycode: "+ evento.keyCode);
+	console.log("charCode: "+ evento.key);
+	console.log("carácter: "+ String.fromCharCode(evento.key));*/
+	var imagen = document.getElementById('imagen');
+
+	switch(evento.key){
+		case 'w': 
+			margin = -5;
+			imagen.style.marginTop = margin+"px";
+		break;
+		case 's':
+			console.log("abajo")
+			imagen.style.marginTop = imagen.style.marginTop+5+"px";
+		break;
+		case 'a':
+			console.log("izquierda")
+			imagen.style.marginTop = imagen.style.marginLeft-5+"px";
+		break;
+		case 'd':
+			console.log("derecha")
+			imagen.style.marginTop = imagen.style.marginLeft+5+"px";
+		break;
+	}
+}
+
+function manejadorMouse(event){
+	var evento = event || window.event;
+
+	var X = evento.clientX;
+	var Y= evento.clientY;
+	console.log(X+" , "+Y)
+}
+
 window.onload = function(){
 	document.getElementsByTagName('body')[0].onmouseover = manejadorEventos; 
-
-
+	document.onkeypress = muestraInformacion;
+	document.onclick = manejadorMouse;
 }
+ 
 
 function test2(event){
 	coue
