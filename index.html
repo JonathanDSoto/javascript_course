@@ -31,57 +31,96 @@
 </head>
 <body >
 	<div class="body">
-		<div class="card" style="font-weight: bold;" onmouseover="saludo(this)" onmouseout="despedida(this)">
-			<b name="tituloUno">
-				Texto
-			</b>
-			<p name="parrafo" id="parrafin">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
+		<div class="card" style="font-weight: bold;" >
+			<form name="formPersonalData" >
+				
+				<fieldset>
+					<legend>
+						Datos personales
+					</legend>
 
-			<img src="assets/img/tools.jpg" id="imagen" onmouseover="rezice(this)" onmouseout="original(this)">
+					<label for="fname">First name:</label>
+					<input type="text" placeholder="jhon doe" value="juanito" id="fname" name="fname"><br><br>
+
+					<label for="lname">Last name:</label> 
+					<input type="text" id="lname" onblur="valida(this,'apellido')" name="lname"><br><br>
+
+					<label for="email">Email:</label> 
+					<input type="email" id="email" name="email"><br><br>
+				</fieldset>
+
+				<input type="button" onclick="validatePersonalData()" name="" value="enviar">
+
+			</form>
 		</div>
-		<div class="card" id="segundo_div" onmouseover="saludo(this)" onmouseout="despedida(this)">
-			<h1 name="EncabezadoUno">Hola mundo</h1>
-			<p name="parrafo2">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud <b>exercitation ullamco laboris nisi ut</b> aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa <a href="https://www.google.com/" target="_blank" id="enlace">qui officia deserunt mollit anim id es</a> t laborum.
-			</p>
+		<div class="card" id="segundo_div" >
+			 <form name="formBankData">
+				
+				<fieldset>
+					<legend>
+						Datos bancarios
+					</legend>
+
+					<label for="anumber">Account number:</label>
+					<input type="text" id="anumber" name="anumber"><br><br>
+
+					<label for="bname">Bank Name:</label> 
+					<input type="text" id="bname" onblur="valida(this,'banco')" name="bname"><br><br>
+
+					<label for="cvv">Cvv:</label> 
+					<input type="text" onkeypress="validate()" id="cvv" name="cvv"><br><br>
+				</fieldset>
+
+			</form>
 		</div>
-		<div class="card" onmouseover="saludo(this)" onmouseout="despedida(this)"> 
-			<h1>Lista</h1>
-			<ol name="lista">
-				<li>
-					Uno
-				</li>
-				<li name="li_dos">
-					Dos
-				</li>
-				<li>
-					Tres
-				</li>
-			</ol>
+		<div class="card" > 
+			 <form name="formContactInfo">
+				
+				<fieldset>
+					<legend>
+						Contact Info
+					</legend>
 
-			<img src="assets/img/tools.jpg" onmouseover="rezice(this)" onmouseout="original(this)">
+					<label for="address">Hoteles:</label>
+					<select onchange="getHotel(this)" id="hoteles" name="hoteles">
+						<option disabled="" selected="">Seleccione un hotel</option>
+						<option value="1">Hotel 1</option>
+						<option value="2">Hotel 2</option>
+						<option value="3">Hotel 3</option>
+						<option value="4">Hotel 4</option>
+					</select>
 
-			<button onclick="excuteOrder66()" data-cc="1">
-				click me
-			</button>
+					<br><br>
 
-			<hr>
+					<label for="pcode">Servicios:</label>
+					
+					<input type="checkbox" value="desayuno" onchange="cambio(this,'desayuno')" name="desayuno" id="desayuno">
+					Desayuno 
 
-			<button onclick="excuteOrder67()">
-				Click me
-			</button>
+					<input type="checkbox" value="lavenderia" onchange="cambio(this,'lavenderia')" name="lavenderia" value="lavenderia">
+					Lavanderia
+
+					<input type="checkbox" value="internet" onchange="cambio(this,'internet')" name="internet" value="internet">
+					Internet
+
+
+					<br><br>
+
+					<label for="cena">Selecciona la cena:</label>
+					
+					
+					<input checked type="radio" onchange="cenaX()" value="pollo" name="cena" id="cena_1">
+					Pollo
+					<input type="radio" onchange="cenaX()" value="res" name="cena" id="cena_2">
+					Res
+					<input type="radio" onchange="cenaX()" value="ensalada" name="cena" id="cena_3">
+					Ensalada
+
+					<br><br>
+
+				</fieldset>
+
+			</form>
 		</div>
 	</div>
 	
@@ -96,7 +135,7 @@
 	</noscript>
 
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/dom.js?v=0.5"></script>
+	<script type="text/javascript" src="assets/js/forms.js?v=0.1"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">
