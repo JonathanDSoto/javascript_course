@@ -10,6 +10,45 @@ for (var i = 0; i < formularios.length; i++) {
 	}
 }*/
 
+function soloLetras(e){
+	var letras = 'abcdefghijklmnopqrstxyz';
+	var numeros = '0123456789';
+
+	var event = e || window.event;
+	var codigoChar = event.key;
+	console.log(codigoChar)
+
+	for (var i = 0; i < letras.length; i++) {
+		if (letras[i]== codigoChar) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function soloNumeros(e){
+	var letras = 'abcdefghijklmnopqrstxyz';
+	var numeros = '0123456789';
+
+	var event = e || window.event;
+	var codigoChar = event.key;
+	console.log(codigoChar)
+
+	for (var i = 0; i < letras.length; i++) {
+		if (numeros[i]== codigoChar) {
+			return true;
+		}
+	}
+	return false;
+}
+
+document.getElementById('email').focus()
+
+function textArea(){
+	var texto = document.formBankData.descripcion;
+	console.log(texto.value)
+}
+
 function getHotel(){
 	var lista = document.formContactInfo.hoteles;
 	console.log(lista)
@@ -43,12 +82,13 @@ function cenaX(){
 	}
 }
 
-function valida(target,mensaje){
+function valida(target,id,mensaje){
 	var input = target.value;
 	if(input.length<=0){
 		alert("rellene el campo "+mensaje)
 	}
-	//input.focus()
+	console.log(id)
+	//document.getElementById(id).focus();
 }
 
 function validate(){
@@ -85,3 +125,6 @@ function validatePersonalData(){
 	//onblur
 }
 
+function prueba(e){
+	console.log(e)
+}

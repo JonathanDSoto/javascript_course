@@ -43,10 +43,10 @@
 					<input type="text" placeholder="jhon doe" value="juanito" id="fname" name="fname"><br><br>
 
 					<label for="lname">Last name:</label> 
-					<input type="text" id="lname" onblur="valida(this,'apellido')" name="lname"><br><br>
+					<input type="text" id="lname" onblur="valida(this,'lname','apellido')" name="lname"><br><br>
 
 					<label for="email">Email:</label> 
-					<input type="email" id="email" name="email"><br><br>
+					<input type="email" id="email" name="email" required=""><br><br>
 				</fieldset>
 
 				<input type="button" onclick="validatePersonalData()" name="" value="enviar">
@@ -54,7 +54,7 @@
 			</form>
 		</div>
 		<div class="card" id="segundo_div" >
-			 <form name="formBankData">
+			 <form name="formBankData" method="GET">
 				
 				<fieldset>
 					<legend>
@@ -62,16 +62,25 @@
 					</legend>
 
 					<label for="anumber">Account number:</label>
-					<input type="text" id="anumber" name="anumber"><br><br>
+					<input type="text" id="anumber" name="anumber" required=""><br><br>
 
 					<label for="bname">Bank Name:</label> 
-					<input type="text" id="bname" onblur="valida(this,'banco')" name="bname"><br><br>
+					<input type="text" id="bname" onkeypress="return soloLetras(event)" onblur="valida(this,'bname','banco')" name="bname"><br><br>
 
 					<label for="cvv">Cvv:</label> 
-					<input type="text" onkeypress="validate()" id="cvv" name="cvv"><br><br>
+					<input type="text" onkeypress="return soloNumeros(event)" id="cvv" name="cvv"><br><br>
+
+					<label>Description:</label>
+					<textarea rows="2" cols="2" placeholder="write here" name="descripcion" onblur="textArea()"></textarea>
 				</fieldset>
 
+				<button onclick=" this.disabled=true; this.innerHTML='Solicitando respuesta'; this.form.submit();">
+					Prueba de botón
+				</button>
+
 			</form>
+
+			
 		</div>
 		<div class="card" > 
 			 <form name="formContactInfo">
@@ -135,7 +144,7 @@
 	</noscript>
 
 	<!-- JAVSCRIPT DOCUMENTO EXTERNO -->
-	<script type="text/javascript" src="assets/js/forms.js?v=0.1"></script>
+	<script type="text/javascript" src="assets/js/forms.js?v=0.2"></script>
 
 	<!-- JAVASCRIPT EN EL MISMO DOCUMENTO -->
 	<script type="text/javascript">
