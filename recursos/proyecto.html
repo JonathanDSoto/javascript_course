@@ -5,15 +5,15 @@
 	<title>Proyecto final</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
-<body>
+<body class="">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		  <a class="navbar-brand text-center" href="#">Proyecto final</a>  
 		</nav>
 	</div>
 
-	<div class="container">
-	  	<div class="container">
+	<div class="container-fluid">
+	  	<div class="container-fluid">
 	  		<div class="row">
 	  			<div class="col">
 	  				<hr>
@@ -25,7 +25,7 @@
 	  		</div>
 		  <div class="row"> 
 
-		    <div class="col-sm">
+		    <div class="col-sm-9">
 		      	<table class="table table-striped table-bordered">
 					  <thead class="thead-dark">
 					    <tr>
@@ -34,46 +34,248 @@
 					      <th scope="col">+</th>
 					      <th scope="col">-</th>
 					      <th>Modifer</th>
-					      <th>Results</th>
 					      <th></th>
+					      <th>Results</th>
 					    </tr>
 					  </thead>
 					  <tbody>
+					  	<!-- d4 -->
 					    <tr>
 					      <th>
 					      	<img src="dado.png" style="width: 10%;">
 					      </th>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
+					      <td>
+					      	<input type="number" id="d4" name="d4" value="1">
+					      	<label>d4</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d4r_1" name="d4r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d4r_2" name="d4r">
+					      </td>
+					      <td>
+					      	<input type="number" value="0" name="d4mo" id="d4mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d4r" id="d4r">
+					      </td>
 					    </tr> 
+					    
+					    <!-- d6 -->
 					    <tr>
 					      <th>
 					      	<img src="dado.png" style="width: 10%;">
 					      </th>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
+					      <td>
+					      	<input type="number" id="d6" name="d6" value="1">
+					      	<label>d6</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d6r_1" name="d6r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d6r_2" name="d6r">
+					      </td>
+					      <td>
+					      	<input type="number" name="d6mo" value="0" id="d6mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d6r" id="d6r">
+					      </td>
 					    </tr>
+
+					    <!-- d8 -->
 					    <tr>
 					      <th>
 					      	<img src="dado.png" style="width: 10%;">
 					      </th>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
+					      <td>
+					      	<input type="number" id="d8" name="d8" value="1">
+					      	<label>d8</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d8r_1" name="d8r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d8r_2" name="d8r">
+					      </td>
+					      <td>
+					      	<input type="number" value="0" name="d8mo" id="d8mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d8r" id="d8r">
+					      </td>
 					    </tr> 
+
+					    <!-- d10 -->
+					    <tr>
+					      <th>
+					      	<img src="dado.png" style="width: 10%;">
+					      </th>
+					      <td>
+					      	<input type="number" id="d10" name="d10" value="1">
+					      	<label>d10</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d10r_1" name="d10r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d10r_2" name="d10r">
+					      </td>
+					      <td>
+					      	<input type="number" value="0" name="d10mo" id="d10mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d10r" id="d10r">
+					      </td>
+					    </tr> 
+
+					    <!-- d100 -->
+					    <tr>
+					      <th>
+					      	<img src="dado.png" style="width: 10%;">
+					      </th>
+					      <td>
+					      	<input type="number" id="d100" name="d100" value="1">
+					      	<label>d100</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d100r_1" name="d100r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d100r_2" name="d100r">
+					      </td>
+					      <td>
+					      	<input type="number" value="0" name="d100mo" id="d8mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d100r" id="d100r">
+					      </td>
+					    </tr> 
+
+					    <!-- d12 -->
+					    <tr>
+					      <th>
+					      	<img src="dado.png" style="width: 10%;">
+					      </th>
+					      <td>
+					      	<input type="number" id="d12" name="d12" value="1">
+					      	<label>d12</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d12r_1" name="d12r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d12r_2" name="d12r">
+					      </td>
+					      <td>
+					      	<input value="0" type="number" name="d12mo" id="d12mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d12r" id="d12r">
+					      </td>
+					    </tr> 
+
+					    <!-- d20 -->
+					    <tr>
+					      <th>
+					      	<img src="dado.png" style="width: 10%;">
+					      </th>
+					      <td>
+					      	<input type="number" id="d20" name="d20" value="1">
+					      	<label>d20</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="d20r_1" name="d20r" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="d20r_2" name="d20r">
+					      </td>
+					      <td>
+					      	<input value="0" type="number" name="d20mo" id="d20mo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="d20r" id="d20r">
+					      </td>
+					    </tr> 
+
+					    <!-- dX -->
+					    <tr>
+					      <th>
+					      	<input type="number" id="dX1" name="dX1" value="1"> 
+					      </th>
+					      <td>
+					      	<input type="number" id="dX2" name="dX2" value="1">
+					      	<label>dX</label>
+					      </td>
+					      <td>
+					      	<input type="radio" value="suma" id="dXr_1" name="dXr" checked="">
+					      </td>
+					      <td>
+					      	<input type="radio" value="resta" id="dXr_2" name="dXr">
+					      </td>
+					      <td>
+					      	<input value="0" type="number" name="dXmo" id="dXmo">
+					      </td>
+					      <td>
+					      	<button type="button" id="" class="btn btn-info">
+					      		Roll
+					      	</button>
+					      </td>
+					      <td>
+					      	<input type="number" name="dXr" id="dXr">
+					      </td>
+					    </tr> 
+
 					  </tbody>
 					</table>
+		    </div>
+		    <div class="col-sm-2">
+		    	<div class="col-sm">
+		    		<textarea rows="20" class="form-control" id="texto" name="texto" placeholder="          NOTES
+-------------------------
+This field records your latest roll at its top.
+
+Modified results that would produce a number less than one display as one." ></textarea>
+
+				<a href="" class="btn btn-danger">Reset</a>
+		    	</div>
 		    </div>
 
 		  </div>
